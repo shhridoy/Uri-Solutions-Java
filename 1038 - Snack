@@ -1,0 +1,41 @@
+import java.io.*;
+public class Main
+{
+    private static BufferedReader br =new BufferedReader (new InputStreamReader (System.in));
+    private static PrintStream ps = new PrintStream (System.out);
+    public static void main (String[]args) throws IOException {
+        
+        String[] input = br.readLine().split("\\s+");
+        
+        int x = Integer.parseInt(input[0]);
+        int y = Integer.parseInt(input[1]);
+        
+        double price;
+        
+        switch(x){
+            case 1:
+                price = 4.00;
+                break;
+            case 2:
+                price = 4.50;
+                break;
+            case 3:
+                price = 5.00;
+                break;
+            case 4:
+                price = 2.00;
+                break;
+            case 5:
+                price = 1.50;
+                break;
+            default:
+                price = 0.00;
+                break;
+        }
+        
+        ps.printf("Total: R$ %.2f\n", (y*price));
+        
+        ps.close ();
+        br.close ();
+  }
+}
