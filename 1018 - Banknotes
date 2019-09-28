@@ -1,0 +1,38 @@
+import java.io.*;
+
+public class Main
+{
+    private static BufferedReader br =new BufferedReader (new InputStreamReader (System.in));
+    private static PrintStream ps = new PrintStream (System.out);
+    public static void main (String[]args) throws IOException {
+      
+        int num = Integer.parseInt(br.readLine());
+        
+        int n100=0, n50=0, n20=0, n10=0, n5=0, n2=0, n1=0, div;
+
+        n100 = num/100;
+        div = num%100;
+        n50 = div/50;
+        div = div%50;
+        n20 = div/20;
+        div = div%20;
+        n10 = div/10;
+        div = div%10;
+        n5 = div/5;
+        div = div%5;
+        n2 = div/2;
+        div = div%2;
+        n1 = div/1;
+        
+        ps.println(num);
+        ps.println(n100+" nota(s) de R$ 100,00");
+        ps.println(n50+" nota(s) de R$ 50,00");
+        ps.println(n20+" nota(s) de R$ 20,00");
+        ps.println(n10+" nota(s) de R$ 10,00");
+        ps.println(n5+" nota(s) de R$ 5,00");
+        ps.println(n2+" nota(s) de R$ 2,00");
+        ps.println(n1+" nota(s) de R$ 1,00");
+        ps.close ();
+        br.close ();
+  }
+}
