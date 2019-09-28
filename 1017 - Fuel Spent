@@ -1,0 +1,16 @@
+import java.io.*;
+
+public class Main
+{
+    private static BufferedReader br =new BufferedReader (new InputStreamReader (System.in));
+    private static PrintStream ps = new PrintStream (System.out);
+    public static void main (String[]args) throws IOException {
+      
+        double t = Integer.parseInt(br.readLine());
+        double s = Integer.parseInt(br.readLine());
+
+        ps.printf ("%.3f\n", (t*s)/12);
+        ps.close ();
+        br.close ();
+  }
+}
