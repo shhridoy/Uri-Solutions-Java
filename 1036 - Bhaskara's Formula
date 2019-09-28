@@ -1,0 +1,28 @@
+import java.io.*;
+public class Main
+{
+    private static BufferedReader br =new BufferedReader (new InputStreamReader (System.in));
+    private static PrintStream ps = new PrintStream (System.out);
+    public static void main (String[]args) throws IOException {
+        String[] input = br.readLine().split("\\s+");
+        double A = Double.parseDouble(input[0]);
+        double B = Double.parseDouble(input[1]);
+        double C = Double.parseDouble(input[2]);
+        
+        double R1, R2;
+        
+        double d = Math.sqrt((Math.pow(B, 2) - (4*A*C)));
+        
+        R1 = (-B + d) / (2*A);
+        R2 = (-B - d) / (2*A);
+        
+        if (A != 0 && d > 0) {
+            ps.printf("R1 = %.5f\nR2 = %.5f\n", R1, R2);
+        } else {
+            ps.printf("Impossivel calcular\n");
+        }
+        
+        ps.close ();
+        br.close ();
+  }
+}
