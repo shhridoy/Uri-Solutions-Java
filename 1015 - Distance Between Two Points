@@ -1,0 +1,23 @@
+import java.io.*;
+
+public class Main
+{
+  private static BufferedReader br =new BufferedReader (new InputStreamReader (System.in));
+  private static PrintStream ps = new PrintStream (System.out);
+  public static void main (String[]args) throws IOException {
+      
+    String[] input1 = br.readLine ().split ("\\s+");
+    String[] input2 = br.readLine ().split ("\\s+");
+
+    double x1 = Double.parseDouble (input1[0]);
+    double y1 = Double.parseDouble (input1[1]);
+    double x2 = Double.parseDouble (input2[0]);
+    double y2 = Double.parseDouble (input2[1]);
+
+    double val =Math.sqrt (Math.pow ((x2 - x1), 2) + Math.pow ((y2 - y1), 2));
+
+      ps.printf ("%.4f\n", val);
+      ps.close ();
+      br.close ();
+  }
+}
