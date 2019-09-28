@@ -1,0 +1,25 @@
+import java.io.*;
+public class Main
+{
+    private static BufferedReader br =new BufferedReader (new InputStreamReader (System.in));
+    private static PrintStream ps = new PrintStream (System.out);
+    public static void main (String[]args) throws IOException {
+        
+        double value = Double.parseDouble(br.readLine());
+        
+        if (value >= 0.00 && value <= 25.00) {
+            ps.println("Intervalo [0,25]");
+        } else if (value > 25.00 && value <= 50.00) {
+            ps.println("Intervalo (25,50]");
+        } else if (value > 50.00 && value <= 75.00) {
+            ps.println("Intervalo (50,75]");
+        } else if (value > 75.00 && value <= 100.00) {
+            ps.println("Intervalo (75,100]");
+        } else {
+            ps.println("Fora de intervalo");
+        }
+        
+        ps.close ();
+        br.close ();
+  }
+}
