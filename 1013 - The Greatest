@@ -1,0 +1,18 @@
+import java.io.*;
+
+public class Main
+{
+    private static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+    private static PrintStream ps = new PrintStream(System.out);
+	public static void main(String[] args) throws IOException {
+		String[] input = br.readLine().split("\\s+");
+	    int a = Integer.parseInt(input[0]);
+	    int b = Integer.parseInt(input[1]);
+	    int c = Integer.parseInt(input[2]);
+	    int largestAB = (a+b+Math.abs(a-b)) / 2;
+	    int largestABC = (largestAB+c+Math.abs(largestAB-c)) / 2;
+		ps.printf("%s eh o maior\n", largestABC);
+		ps.close();
+		br.close();
+	}
+}
